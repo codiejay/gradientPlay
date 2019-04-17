@@ -169,8 +169,9 @@
     .input, .gradient{
         margin: 30vh 0 0 3vw;
         width: 90vw;
-        padding: 0.1vw 0vw 0.1vw 2vw;
-        display: none;
+        padding: 0;
+        font-size: 0.8em;
+        
        
         
 
