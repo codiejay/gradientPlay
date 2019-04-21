@@ -4,27 +4,42 @@
     } */
 
     body{
-        font-family: 'Poppins', sans-serif;
-        width: 90vw;
-        height: 62vh;
-        padding: 0;
+        margin: 0; padding: 0;
+    }
+    #motherSolid{
+        width: 70vw;
+        height: 60vh;
         margin: 0;
+        padding-top: 40vh;
+        padding-left: 30vw;
+
+    }
+
+    #motherGradient{
+        width: 77vw;
+        height: 65vh;
+        padding-top: 35vh;
+        padding-left: 23vw;
+       
+
+
     }
 
     .input, .gradient{
-        margin-top: 38vh;
-        margin-left: 30vw;
+        
+       margin: 0;
+       padding: 0;
         border-radius: 100px;
         border: 1px solid  rgb(49, 49, 49);
         padding: 1vh 0vh 1vh 10vh;
         width: 35vw;
-        /* font-size: 1.9em; */
+        font-size: 0.6em;
         font-weight: 60;
         font-family: 'Poppins', sans-serif;
     }
 
     .gradient{
-        margin-left: 20vw;
+        /* margin-left: 20vw; */
         width: 50vw;
         padding: 3vh 0vh 3vh 10vh;
         position: relative;
@@ -50,7 +65,7 @@
     }
 
 
-    span{
+    #gradientButton, #solidButton{
         font-family: 'Poppins', sans-serif;
         border: 1px solid black;
         border-radius: 1000px;
@@ -63,7 +78,7 @@
         
     }
 
-    span p{
+     #gradientButton p, #solidButton p{
         background: -webkit-linear-gradient(red, blue);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -217,3 +232,8 @@
 
 }
    
+
+
+#backToSolid{
+    display: none;
+}

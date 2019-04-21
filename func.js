@@ -1,130 +1,71 @@
-let body  = $("body");
+// The boxes to be colored AKA- Mothers
+let motherSolid = $("#motherSolid");
+let motherGradient = $("#motherGradient");
 
-let gradientBox = $(".gradient");
-let inputBox = $('.Firstinput');
+// The input Boxes whoes values are of essense. 
+let solidGradient = $("#Firstinput")
+let firstGradient = $("#gradientOne");
+let secondGradient = $("#gradientTwo");
 
-let firstColor = $(gradientBox.children()[0]);
-let secondColor = $(gradientBox.children()[2]);
+//The buttons, gradient and solid
+let gotToSolidButton = $("#solidButton")
+let goToGradientButton = $("#gradientButton")
 
-let oneColor = true;
-let doubleColor = false;
+// Hide the gradient Option
 
-let firstInterval;
-
-let gradientButton = $("#gradientButton");
-
-let cancleButton = $(".gradient h1")
-
-function hideGradient(){
-    gradientBox.hide()
+function hideGradientBox(){
+   motherGradient.hide();
 }
 
-
-gradientBox.css("opacity", "0.6");
-$(".input").css("opacity", "0.6")
-
-
-window.onload = hideGradient;
+window.onload = hideGradientBox;
 
 
 
 
+// Check every 1 of every 1ms for the value of the input box (For the solid Color)
 
-    if(oneColor === true){
-        firstInterval = setInterval(() => {
-      let backColor = inputBox.val();
-    body.css("background", "#"+backColor);
-
-    if(inputBox.val() === ""){
-
-        body.css("background", "#fff");
-        
-
+setInterval(function(){
+    if(solidGradient.val() !== ""){
+    motherSolid.css({"background": "#"+solidGradient.val()});
 
     }
-}, 2);
 
-}
+    else{
+        motherSolid.css({"background": "#fff"});
+    }
+
+}, 1)
 
 
+// Check every 1 of every 1ms for the value of the input box (For the Gradient)
 
+setInterval(function(){
 
-// setInterval(function(){
+    if(firstGradient.val() !== "" && secondGradient.val()  !== ""){
+        motherGradient.css({"background": "linear-gradient( to top right , " + "#" +firstGradient.val() + "," + "#" + secondGradient.val() + ")"})
+    }
 
-//     if(oneColor == true){
-// setInterval(() => {
-    
-//     if(firstColor.val() !== "" && secondColor.val() !== ""){
-//         body.css("background", "#"+backColor);
-//     }
-   
-
-    
-// }, 1);
-
-// }
-// }, 1)
+    else{
+        motherGradient.css({"background": "#fff"})
+    }
+}, 1)
 
 
 
-gradientButton.on("click", function(){
-    oneColor = false;
-    doubleColor = true;
-    gradientBox.show(300);
-    $(".input").hide(100);
-    getMe();
-    clearInterval( firstInterval)
-   
 
+// show the gradient when the G BUTTON  is CLICKED
 
-
+goToGradientButton.on("click", function(){
+    motherGradient.show(220);
+    motherSolid.hide(200)
 })
 
 
 
-
-
-function getMe(){
-    if(doubleColor === true){
-    console.log("Yeah")
-    setInterval(() => {
-
-if(firstColor.val() !== "" && secondColor.val() !== ""){
-
-body.css("background", "linear-gradient("+"to top right" + ", #"+firstColor.val()+","+"#"+secondColor.val()+")" );
-
-}
-
-
-if(firstColor.val() === "" || secondColor.val() == ""){
-    body.css("background", "#fff");
-}
+gotToSolidButton.on("click", function () {
+    motherGradient.hide(200);
+    motherSolid.show(220)
+  })
 
 
 
-
-}, 1)
-}
-}
-
-
-let cancelGradient = $(".hideGradient");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 234 905 557 9951
-// +44 7985 488041
