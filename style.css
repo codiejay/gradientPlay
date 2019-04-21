@@ -191,16 +191,22 @@
   }
 
   #motherGradient{
-      width: 100vw;
+      width: 98vw;
       height: 60vh;
+      margin: 0 auto;
       padding: 40vh 0 0 0 ;
 
   }
 
   .gradient{
-      width: 80%;
+      width: 100%;
       margin: 0 auto;
-      padding: 1vh;
+      padding: 0.1vh;
+      font-size: 0.45em;
+  }
+
+  .gradient .input{
+      width: 10%;
   }
 
 
