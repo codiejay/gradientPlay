@@ -26,7 +26,17 @@ window.onload = hideGradientBox;
 
 setInterval(function(){
     if(solidGradient.val() !== ""){
-    motherSolid.css({"background": "#"+solidGradient.val()});
+
+        if(solidGradient.val()[0] === "#"){
+
+            let formatedSolidNum = solidGradient.val().slice(1);
+            motherSolid.css({"background": "#"+formatedSolidNum});
+        }
+
+        else{
+            motherSolid.css({"background": "#"+solidGradient.val()});
+        }
+   
 
     }
 
@@ -41,8 +51,31 @@ setInterval(function(){
 
 setInterval(function(){
 
+    let fomartedFirstGradient;
+    let formatedSecondGradient
+
     if(firstGradient.val() !== "" && secondGradient.val()  !== ""){
-        motherGradient.css({"background": "linear-gradient( to top right , " + "#" +firstGradient.val() + "," + "#" + secondGradient.val() + ")"})
+
+        if(firstGradient.val()[0] === "#"){
+
+            fomartedFirstGradient = firstGradient.val().slice(1);
+
+        }
+
+        else{
+            fomartedFirstGradient = firstGradient.val();
+        }
+
+
+        if(secondGradient.val()[0] === "#"){
+           formatedSecondGradient = secondGradient.val().slice(1);
+        }
+
+        else{
+            formatedSecondGradient = secondGradient.val();
+        }
+
+        motherGradient.css({"background": "linear-gradient( to top right , " + "#" + fomartedFirstGradient + "," + "#" + formatedSecondGradient + ")"})
     }
 
     else{

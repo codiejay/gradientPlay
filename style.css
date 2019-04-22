@@ -3,6 +3,11 @@
         padding: 0;
     } */
 
+
+    html{
+        background-color: red;
+    }
+
     body{
         margin: 0; padding: 0;
     }
@@ -191,15 +196,15 @@
   }
 
   #motherGradient{
-      width: 98vw;
+      width: 100vw;
       height: 60vh;
-      margin: 0 auto;
+      margin: 0;
       padding: 40vh 0 0 0 ;
 
   }
 
   .gradient{
-      width: 100%;
+      width: 98%;
       margin: 0 auto;
       padding: 0.1vh;
       font-size: 0.45em;
