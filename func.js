@@ -31,13 +31,16 @@ setInterval(function(){
 
             let formatedSolidNum = solidGradient.val().slice(1);
             motherSolid.css({"background": "#"+formatedSolidNum});
+            $(".addressBar").attr("content", "#"+solidGradient.val());
         }
 
         else{
-            motherSolid.css({"background": "#"+solidGradient.val()});
+            motherSolid.css({"background": "#"+formatedSolidNum});
+            $(".addressBar").attr("content",  "#"+formatedSolidNum)
+
         }
 
-        $(".addressBar").attr("content", "#"+solidGradient.val());
+       
 
         
    
