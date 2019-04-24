@@ -26,32 +26,22 @@ window.onload = hideGradientBox;
 
 setInterval(function(){
     if(solidGradient.val() !== ""){
-        let formatedSolidNum ;
 
         if(solidGradient.val()[0] === "#"){
 
-            formatedSolidNum = solidGradient.val().slice(1);
+            let formatedSolidNum = solidGradient.val().slice(1);
             motherSolid.css({"background": "#"+formatedSolidNum});
-            $(".addressBar").attr("content", "#"+solidGradient.val());
         }
 
         else{
-            motherSolid.css({"background": "#"+formatedSolidNum});
-            $(".addressBar").attr("content",  "#"+formatedSolidNum)
-
+            motherSolid.css({"background": "#"+solidGradient.val()});
         }
-
-       
-
-        
    
 
     }
 
     else{
         motherSolid.css({"background": "#fff"});
-        $(".addressBar").attr("content", "#e5058f");
-
     }
 
 }, 1)
@@ -86,12 +76,10 @@ setInterval(function(){
         }
 
         motherGradient.css({"background": "linear-gradient( to top right , " + "#" + fomartedFirstGradient + "," + "#" + formatedSecondGradient + ")"})
-        $(".addressBar").attr("content", "#"+fomartedFirstGradient);
     }
 
     else{
         motherGradient.css({"background": "#fff"})
-        $(".addressBar").attr("content", "#e5058f");
     }
 }, 1)
 
