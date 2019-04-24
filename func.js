@@ -82,12 +82,12 @@ setInterval(function(){
         }
 
         motherGradient.css({"background": "linear-gradient( to top right , " + "#" + fomartedFirstGradient + "," + "#" + formatedSecondGradient + ")"})
-        $(".addressBar").attr("content", "#"+fomartedFirstGradient )
+        // $(".addressBar").attr("content", "#"+fomartedFirstGradient )
     }
 
     else{
         motherGradient.css({"background": "#fff"})
-        $(".addressBar").attr("content", "#fff")
+        // $(".addressBar").attr("content", "#fff")
     }
 }, 1)
 
