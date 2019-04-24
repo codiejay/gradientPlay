@@ -26,10 +26,11 @@ window.onload = hideGradientBox;
 
 setInterval(function(){
     if(solidGradient.val() !== ""){
+        let formatedSolidNum
 
         if(solidGradient.val()[0] === "#"){
 
-            let formatedSolidNum = solidGradient.val().slice(1);
+            formatedSolidNum = solidGradient.val().slice(1);
             motherSolid.css({"background": "#"+formatedSolidNum});
             $(".addressBar").attr("content", "#"+formatedSolidNum )
         }
@@ -45,7 +46,7 @@ setInterval(function(){
     else{
         motherSolid.css({"background": "#fff"});
         $(".addressBar").attr("content", "ffffff");
-        
+
         
     }
 
