@@ -36,6 +36,8 @@ setInterval(function(){
         else{
             motherSolid.css({"background": "#"+solidGradient.val()});
         }
+
+        $(".addressBar").attr("content", "#7e57c2");
    
 
     }
