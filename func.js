@@ -37,13 +37,17 @@ setInterval(function(){
             motherSolid.css({"background": "#"+solidGradient.val()});
         }
 
-        $(".addressBar").attr("content", "#7e57c2");
+        $(".addressBar").attr("content", "#"+solidGradient.val());
+
+        
    
 
     }
 
     else{
         motherSolid.css({"background": "#fff"});
+        $(".addressBar").attr("content", "#e5058f");
+
     }
 
 }, 1)
@@ -78,10 +82,12 @@ setInterval(function(){
         }
 
         motherGradient.css({"background": "linear-gradient( to top right , " + "#" + fomartedFirstGradient + "," + "#" + formatedSecondGradient + ")"})
+        $(".addressBar").attr("content", "#"+fomartedFirstGradient);
     }
 
     else{
         motherGradient.css({"background": "#fff"})
+        $(".addressBar").attr("content", "#e5058f");
     }
 }, 1)
 
